@@ -3,7 +3,7 @@ Broadcast a digital library of challenged or banned books with a portable anti-c
 ![Tiny Banned Book Substack Banner](https://user-images.githubusercontent.com/112988379/190521912-a7614490-96fd-4341-af4a-f375befa4771.png)
 
 # What is the git repo for?
-I created a full tutorial on my substack (anarchosolarpunk.substack.com), which has step by step information about how to use and install these files. 
+I created a full tutorial on my substack [https://anarchosolarpunk.substack.com/p/bannedbooklibrary](https://anarchosolarpunk.substack.com/p/bannedbooklibrary), which has step by step information about how to use and install these files. 
 
 # Files to make the Tiny Banned Book Library 
 Inside this repo is a list of all the commands to quickly copy to your machine, then copy and paste into a terminal to get up and running quickly. 
