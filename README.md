@@ -1,6 +1,6 @@
 # Tiny-Banned-Book-Library
 Broadcast a digital library of challenged or banned books with a portable anti-censorship e-book server.
-![Tiny Banned Book Substack Banner](https://user-images.githubusercontent.com/112988379/190521767-d0df6dc2-325f-4ca4-832c-1b37aaf9d3ca.png)
+![Tiny Banned Book Substack Banner](https://user-images.githubusercontent.com/112988379/190521912-a7614490-96fd-4341-af4a-f375befa4771.png)
 
 # What is the git repo for?
 I created a full tutorial on my substack (anarchosolarpunk.substack.com), which has step by step information about how to use and install these files. 
