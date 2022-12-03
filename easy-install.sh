@@ -18,7 +18,7 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
 mkdir /home/library/'Tiny Banned Book Library'
 echo "Copying the calibre service to the right area"
 #copy over the service to the correct area
-cp ~/Downloads/Tiny-Banned-Book-Library-main/calibre-server.service /etc/systemd/system/calibre-server.service
+cp ~/Downloads/Tiny-Banned-Book-Library/calibre-server.service /etc/systemd/system/calibre-server.service
 sudo systemctl daemon-reload
 sudo systemctl start calibre-server
 sudo systemctl enable calibre-server
@@ -35,7 +35,7 @@ sudo make
 sudo make install
 echo "Removing old nodogsplash config files and replacing them with the correct ones..."
 sudo rm -rf /etc/nodogsplash/htdocs/*
-cp ~/Downloads/Tiny-Banned-Book-Library-main/nodogsplash-files/* /etc/nodogsplash/htdocs
+cp ~/Downloads/Tiny-Banned-Book-Library/nodogsplash-files/* /etc/nodogsplash/htdocs
 sudo systemctl unmask hostapd
 sudo systemctl disable hostapd
 
@@ -43,18 +43,18 @@ sudo systemctl disable hostapd
 #move all the config files to the right spots
 echo "Moving config files to the right areas..."
 rm -rf /etc/dnsmasq.conf
-cp ~/Downloads/Tiny-Banned-Book-Library-main/dnsmasq.conf /etc/dnsmasq.conf
-cp ~/Downloads/Tiny-Banned-Book-Library-main/dhcpcd.conf /etc/dhcpcd.conf
+cp ~/Downloads/Tiny-Banned-Book-Library/dnsmasq.conf /etc/dnsmasq.conf
+cp ~/Downloads/Tiny-Banned-Book-Library/dhcpcd.conf /etc/dhcpcd.conf
 sudo rfkill unblock wlan
-cp ~/Downloads/Tiny-Banned-Book-Library-main/hostapd.conf /etc/hostapd/hostapd.conf
+cp ~/Downloads/Tiny-Banned-Book-Library/hostapd.conf /etc/hostapd/hostapd.conf
 sudo systemctl stop systemd-resolved
-cp ~/Downloads/Tiny-Banned-Book-Library-main/rc-disabled.local /etc/rc.local
-cp ~/Downloads/Tiny-Banned-Book-Library-main/nodogsplash.conf /etc/nodogsplash/nodogsplash.conf
+cp ~/Downloads/Tiny-Banned-Book-Library/rc-disabled.local /etc/rc.local
+cp ~/Downloads/Tiny-Banned-Book-Library/nodogsplash.conf /etc/nodogsplash/nodogsplash.conf
 echo "Starting NoDogSplash and editing the HTML files"
 sudo nodogsplash
 sudo unlink /etc/nginx/sites-enabled/default
 echo "Move the config file for the nginxserver."
-cp ~/Downloads/Tiny-Banned-Book-Library-main/example.conf /etc/nginx/sites-available/example.conf
+cp ~/Downloads/Tiny-Banned-Book-Library/example.conf /etc/nginx/sites-available/example.conf
 
 sudo ln -s /etc/nginx/sites-available/example.conf /etc/nginx/sites-enabled/
 sudo nginx -t
