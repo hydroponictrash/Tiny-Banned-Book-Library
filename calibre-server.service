@@ -1,0 +1,12 @@
+[Unit]
+Description=calibre Content server
+After=network.target
+
+[Service]
+Type=simple
+User=library 
+Group=library
+ExecStart=/usr/bin/calibre-server "/home/library/Tiny Banned Book Library" 
+
+[Install]
+WantedBy=multi-user.target
