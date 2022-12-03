@@ -23,7 +23,6 @@ sudo systemctl daemon-reload
 #sudo systemctl start calibre-server
 sudo systemctl enable calibre-server
 sudo systemctl stop calibre-server
-sudo systemctl stop systemd-resolved
 cd /opt
 
 echo "Downloading NoDogSplash"
@@ -52,12 +51,14 @@ sudo cp ~/Downloads/Tiny-Banned-Book-Library/rc-disabled.local /etc/rc.local
 sudo cp ~/Downloads/Tiny-Banned-Book-Library/nodogsplash.conf /etc/nodogsplash/nodogsplash.conf
 echo "Starting NoDogSplash and editing the HTML files"
 sudo nodogsplash
-sudo unlink /etc/nginx/sites-enabled/default
+#sudo unlink /etc/nginx/sites-enabled/default
 echo "Move the config file for the nginxserver."
 sudo cp ~/Downloads/Tiny-Banned-Book-Library/example.conf /etc/nginx/sites-available/example.conf
 
 sudo ln -s /etc/nginx/sites-available/example.conf /etc/nginx/sites-enabled/
 sudo nginx -t
+sleep 60
 sudo systemctl restart nginx
+sudo systemctl stop systemd-resolved
 
-echo "The services have been set to disable autorun. Reboot your system and you should have internet access. Download the books or copy them to a USB drive and move them over. Then move them into the library folder for calibre following the tutorial. After you have the books ready and everything you want downloaded, run the rc-enable.sh file in the tiny library github directory (It should be in your downloads). You might have to run chmod +777 rc-enable.sh to get it to run. Then do ./rc-enable.sh to run the script. After a reboot the server will autoload and start all the services and the calibre server. If you want internet access again, run the rc-disabled.sh script and reboot and you can access the internet. Running rc-disabled.sh will give you internet access after a reboot. Running rc-enable.sh will make the banned book library run as normal after a reboot."
+echo "The services have been set to not autostart, you will not have internet access at the moment. Reboot your system and you should have internet access. Download the books or copy them to a USB drive and move them over. Then move them into the library folder for calibre following the tutorial. After you have the books ready and everything you want downloaded, run the rc-enable.sh file in the tiny library github directory (It should be in your downloads). You might have to run chmod +777 rc-enable.sh to get it to run. Then do ./rc-enable.sh to run the script. After a reboot the server will autoload and start all the services and the calibre server. If you want internet access again, run the rc-disabled.sh script and reboot and you can access the internet. Running rc-disabled.sh will give you internet access after a reboot. Running rc-enable.sh will make the banned book library run as normal after a reboot."
