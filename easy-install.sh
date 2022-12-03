@@ -8,9 +8,9 @@ echo "Installing Dependencies and software to make everything run..."
 sudo apt-get install hostapd dnsmasq git build-essential libmicrohttpd-dev net-tools nginx netfilter-persistent iptables-persistent make dhcpcd5 -y
 cd ~/Downloads/
 
-echo "Beep, boop, cloning the banned book library git repo for config files..."
+#echo "Beep, boop, cloning the banned book library git repo for config files..."
 #cloning the banned book library config files to the Downloads directory
-sudo git clone https://github.com/hydroponictrash/Tiny-Banned-Book-Library.git
+#sudo git clone https://github.com/hydroponictrash/Tiny-Banned-Book-Library.git
 
 echo "Download and installing Calibre..."
 #Download and intall calibre
