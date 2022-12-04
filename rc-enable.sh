@@ -1,2 +1,2 @@
 #!/bin/bash
-cp ~/Downloads/Tiny-Banned-Book-Library/rc-enabled.local /etc/rc.local
+sudo cp ~/Downloads/Tiny-Banned-Book-Library/rc-enabled.local /etc/rc.local
