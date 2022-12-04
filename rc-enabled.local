@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo ifconfig wlan0 192.168.4.1 netmask 255.255.255.0
 sudo service systemd-resolved stop
+sudo ifconfig wlan0 192.168.4.1 netmask 255.255.255.0
 sudo service hostapd start
 sudo service dnsmasq start
 sudo nodogsplash
