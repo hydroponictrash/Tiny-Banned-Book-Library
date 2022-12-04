@@ -15,7 +15,7 @@ cd ~/Downloads/
 echo "Download and installing Calibre..."
 #Download and intall calibre
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
-sudo mkdir /home/library/'Tiny Banned Book Library'
+#sudo mkdir /home/library/'Tiny Banned Book Library'
 echo "Copying the calibre service to the right area"
 #copy over the service to the correct area
 sudo cp ~/Downloads/Tiny-Banned-Book-Library/calibre-server.service /etc/systemd/system/calibre-server.service
